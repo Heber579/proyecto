@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MembresiaApplication<membresia>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.gimnacio.membresia.MembresiaApplication",
+            "projectName": "membresia",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
