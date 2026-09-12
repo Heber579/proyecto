@@ -1,9 +1,10 @@
 
-package com.membresias.sistema_membresias.repository;
+package com.gimnacio.membresia.repository;
 
-import com.membresias.sistema_membresias.entity.Perfil;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.gimnacio.membresia.entity.Perfil;
 
 @Repository
 public interface PerfilRepository extends JpaRepository<Perfil, Integer> {

@@ -1,4 +1,4 @@
-package com.membresias.sistema_membresias;
+package com.gimnacio.membresia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

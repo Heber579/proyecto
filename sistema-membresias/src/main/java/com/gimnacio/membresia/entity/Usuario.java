@@ -1,4 +1,4 @@
-package com.membresias.sistema_membresias.entity;
+package com.gimnacio.membresia.entity;
 
 import jakarta.persistence.*;
 

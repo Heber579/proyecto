@@ -1,4 +1,4 @@
-package com.membresias.sistema_membresias.dto;
+package com.gimnacio.membresia.dto;
 
 public class UsuarioDTO {
 

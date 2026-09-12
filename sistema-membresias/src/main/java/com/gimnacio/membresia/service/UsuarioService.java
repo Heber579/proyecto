@@ -1,8 +1,9 @@
-package com.membresias.sistema_membresias.service;
+package com.gimnacio.membresia.service;
 
-import com.membresias.sistema_membresias.entity.Usuario;
-import com.membresias.sistema_membresias.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
+
+import com.gimnacio.membresia.entity.Usuario;
+import com.gimnacio.membresia.repository.UsuarioRepository;
 
 import java.util.List;
 

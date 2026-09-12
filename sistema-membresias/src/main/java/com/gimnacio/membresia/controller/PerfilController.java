@@ -1,8 +1,9 @@
-package com.membresias.sistema_membresias.controller;
+package com.gimnacio.membresia.controller;
 
-import com.membresias.sistema_membresias.entity.Perfil;
-import com.membresias.sistema_membresias.repository.PerfilRepository;
 import org.springframework.web.bind.annotation.*;
+
+import com.gimnacio.membresia.entity.Perfil;
+import com.gimnacio.membresia.repository.PerfilRepository;
 
 import java.util.List;
 

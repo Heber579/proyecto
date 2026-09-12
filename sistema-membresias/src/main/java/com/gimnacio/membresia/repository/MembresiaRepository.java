@@ -1,8 +1,9 @@
-package com.membresias.sistema_membresias.repository;
+package com.gimnacio.membresia.repository;
 
-import com.membresias.sistema_membresias.entity.Membresia;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.gimnacio.membresia.entity.Membresia;
 
 @Repository
 public interface MembresiaRepository extends JpaRepository<Membresia, Integer> {
