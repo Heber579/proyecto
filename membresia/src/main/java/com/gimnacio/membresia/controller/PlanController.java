@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/planes")
+@CrossOrigin(origins = "http://localhost:5173")
 public class PlanController {
     private final PlanService service;
 

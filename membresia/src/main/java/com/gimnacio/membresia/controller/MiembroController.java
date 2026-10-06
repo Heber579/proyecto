@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/miembros")
+@CrossOrigin(origins = "http://localhost:5173")
 public class MiembroController {
     private final MiembroService service;
 

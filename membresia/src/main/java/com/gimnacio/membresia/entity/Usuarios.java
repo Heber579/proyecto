@@ -4,10 +4,7 @@
  */
 package com.gimnacio.membresia.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import jakarta.persistence.Basic;
-import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -17,10 +14,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.NamedQueries;
 import jakarta.persistence.NamedQuery;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.io.Serializable;
-import java.util.List;
 
 /**
  *
@@ -29,35 +24,44 @@ import java.util.List;
 @Entity
 @Table(name = "usuarios")
 @NamedQueries({
-    @NamedQuery(name = "Usuarios.findAll", query = "SELECT u FROM Usuarios u")})
+    @NamedQuery(name = "Usuarios.findAll", query = "SELECT u FROM Usuarios u")
+})
 public class Usuarios implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "id_usuario")
     private Integer idUsuario;
+
     @Basic(optional = false)
     @Column(name = "nombre")
     private String nombre;
+
     @Basic(optional = false)
     @Column(name = "usuario")
     private String usuario;
+
     @Basic(optional = false)
     @Column(name = "contrasena")
     private String contrasena;
+
     @Column(name = "correo")
     private String correo;
+
     @Basic(optional = false)
     @Column(name = "estado")
     private boolean estado;
+
     @JoinColumn(name = "id_perfil", referencedColumnName = "id_perfil")
     @ManyToOne(optional = false)
     private Perfiles idPerfil;
-    @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUsuario")
-    private List<Membresias> membresiasList;
+
+    @JoinColumn(name = "id_miembro", referencedColumnName = "id_miembro")
+    @ManyToOne(optional = true)
+    private Miembros idMiembro;
 
     public Usuarios() {
     }
@@ -130,12 +134,12 @@ public class Usuarios implements Serializable {
         this.idPerfil = idPerfil;
     }
 
-    public List<Membresias> getMembresiasList() {
-        return membresiasList;
+    public Miembros getIdMiembro() {
+        return idMiembro;
     }
 
-    public void setMembresiasList(List<Membresias> membresiasList) {
-        this.membresiasList = membresiasList;
+    public void setIdMiembro(Miembros idMiembro) {
+        this.idMiembro = idMiembro;
     }
 
     @Override
@@ -147,7 +151,6 @@ public class Usuarios implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Usuarios)) {
             return false;
         }
@@ -162,5 +165,4 @@ public class Usuarios implements Serializable {
     public String toString() {
         return "com.gimnacio.membresia.entity.Usuarios[ idUsuario=" + idUsuario + " ]";
     }
-    
 }

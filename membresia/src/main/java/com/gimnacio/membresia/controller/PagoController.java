@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/pagos")
+@CrossOrigin(origins = "http://localhost:5173")
 public class PagoController {
     private final PagoService service;
 
